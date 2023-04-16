@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">   
+      <title><%= title %> </title>
+      <meta name="author" content="">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
+   </head>
+   <body class="main-layout">
+      <div class="back_re">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                     <h2>Students</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div  class="pricing slin">
+         <div class="container">
+            <div class="row">
+               <% for (let st of students) { %>
+                  <div class="col-md-4">
+                     <div class="pricing_box">
+                        <div class="pricing_box_ti">
+                           <h3><%= st.name %> <strong></strong></h3>
+                        </div>
+                        <div class="our_pricing">
+                           <span><%= st.age %></span>
+                           <p><%= st.email %></p>
+                        </div>
+                     </div>
+                  </div>
+               <% } %>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+
